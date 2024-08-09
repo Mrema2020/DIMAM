@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.servicesCard, .home {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  flex: 1 0 8rem;
+  border-radius: 12px;
+  min-width: 30%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.services {
+  display: block;
+  padding-top: 3rem;
+}
+
+.about {
+  padding: 2rem 2.5rem;
+  display: flex;
+}
+
+.left-about {
+display: block;
+min-width: 50%;
+padding-right: 2rem;
+}
+
+.right-about {
+display: block;
+min-width: 50%;
+padding-top: 1rem;
+}
+
+.experience, .customers {
+  display: flex;
+
+}
+
+.experience2, .customers2 {
+  text-align: end;
+
+}
+
+.right-about-details {
+  padding-top: 1rem;
+}
+
+@media only screen and (max-width: 699px)  {
+  .about {
+    display: block;
+    padding-right: 0;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .left-about {
+    padding-bottom: 2rem;
+    
   }
+
+  .right-about {
+    padding-right: 2rem;
+  }
+
+  @keyframes backgroundChange {
+    0% { background-image: url('./assets/background.jpg'); }
+    33% { background-image: url('./assets/cow.jpg'); }
+    66% { background-image: url('./assets/cow2.png'); }
+    100% { background-image: url('./assets/medication.jpg'); }
+}
+
+.bg-carousel {
+  animation: backgroundChange 7s infinite;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 51, 0.5); /* Overlay color with opacity */
+  z-index: 1;
+}
+
+
 }

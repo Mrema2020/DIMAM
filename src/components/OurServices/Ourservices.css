@@ -1,0 +1,123 @@
+.services {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://c8.alamy.com/comp/M8DFTF/dairy-cows-in-a-farm-cowshed-agriculture-industry-farming-and-animal-M8DFTF.jpg') center center/cover no-repeat;
+    padding: 20px; 
+    flex-wrap: wrap;
+    background-attachment: fixed;
+}
+
+h3 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 60px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #000033;
+}
+
+.services img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.services div {
+    background: linear-gradient(180deg, #0cc21c, #d0e4dc 60%);
+    width: 300px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 10px; /* Adjusted margin for better spacing */
+    transition: transform 0.3s ease; /* Added smooth transition for hover effect */
+}
+
+.services div:hover {
+    transform: scale(1.1);
+}
+
+.services div h2 {
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000033;
+}
+
+.services div li {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000033;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .services {
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    h3 {
+        font-size: 28px; /* Slightly smaller font size */
+        margin-top: 40px;
+    }
+
+    .services div {
+        width: 250px;
+        height: 380px;
+    }
+
+    .services img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    h3 {
+        font-size: 26px; /* Smaller font size for h3 */
+        margin-top: 30px;
+    }
+
+    .services div {
+        width: 220px;
+        height: 280px;
+        margin: 10px 0; /* Vertical margin for better stacking */
+    }
+
+    .services img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .services {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    h3 {
+        font-size: 24px; /* Smaller font size for h3 */
+        margin-top: 20px;
+        text-align: center; /* Center the heading */
+    }
+
+    .services div {
+        width: 100%; /* Full width for small screens */
+        max-width: 300px; /* Maintain max width */
+        height: 250px;
+    }
+
+    .services img {
+        width: 60px;
+        height: 60px;
+    }
+    .services div li{
+        padding: 0px;
+    }
+}
